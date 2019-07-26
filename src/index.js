@@ -10,7 +10,10 @@ import ReactDOM from 'react-dom'; // 创建好的组件和 虚拟DOM放到页面
 // const myh1 = React.createElement('h1', null, '这是一个大大的H1')
 const myh1 = React.createElement('h1', { id: 'myh1', title: 'this is a h1' }, '这是一个大大的H1')
 
+// 创建一个虚拟div DOM元素来包含上面定义的虚拟DOM
+const mydiv = React.createElement('div', null, '这是一个div', myh1)
+
 // 使用ReactDOM把虚拟DOM渲染到页面上 
 // 参数1: 要渲染的那个虚拟DOM元素  
 // 参数2: 指定页面上一个DOM元素，当作容器
-ReactDOM.render(myh1, document.getElementById('app'))
+ReactDOM.render(mydiv, document.getElementById('app'))
