@@ -1,0 +1,8 @@
+.commentList {
+    margin: 0 auto;
+    width: 80%;
+    /* background-color: yellow; */
+    text-align: center;
+}
+
+/* css模块化，只针对类选择器和Id选择器生效 */
