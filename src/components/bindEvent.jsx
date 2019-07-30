@@ -1,5 +1,3 @@
-# React绑定事件 & 修改state的值
-```js
 import React from 'react'
 
 export default class BindEvent extends React.Component {
@@ -57,4 +55,3 @@ export default class BindEvent extends React.Component {
         console.log(this.refs.txt.value)
     }
 }
-```
