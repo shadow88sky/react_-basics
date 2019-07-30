@@ -19,7 +19,9 @@ module.exports = {
             { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node-modules/ }, // 千万别忘记添加exclude排除项
             // 可以在css-loader之后，通过?追加参数
             // 其中，有个固定的参数，叫做modules,表示普通的css样式表，启用模块化
-            { test: /\.css$/, use: ['style-loader', 'css-loader?modules=true'] }, // 打包处理css样式表的第三方loader
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] }, // 打包处理css样式表的第三方loader
+            { test: /\.ttf|woff|woff2|eot|svg$/, use: 'url-loader' }, // 打包处理字体文件的loader
+            { test: /\.scss$/, use: ['style-loader', 'css-loader?modules=true', 'sass-loader'] } // 打包处理scss的文件的loader
         ]
     },
     resolve: {

@@ -1,6 +1,6 @@
 import React from 'react'; // 创建组件，虚拟DOM，生命周期
 import CommentDetail from '@/components/commentDetail'
-import cssObj from '@/css/list.css'
+import cssObj from '@/css/list.scss'
 console.log(cssObj)
 
 const commentList = [
