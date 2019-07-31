@@ -10,7 +10,7 @@ export default class LifeCycleChild extends React.Component {
     }
 
     static getDerivedStateFromPorps(nextProps, prveState) {
-        console.log(111111)
+        console.log(1)
         // 函数返回结果会被添加到state里面去
         // null state不改变值
         return null
