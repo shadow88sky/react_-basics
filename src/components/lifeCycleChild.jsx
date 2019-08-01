@@ -2,24 +2,24 @@ import React from 'react';
 
 export default class LifeCycleChild extends React.Component {
     constructor(props) {
-        console.log('constructor')
+        console.log('childrenconstructor')
         super(props)
         this.state = {
-            time: new Date()
+            time: props.time
         }
     }
 
-    static getDerivedStateFromPorps(nextProps, prveState) {
-        console.log(1)
+    static getDerivedStateFromProps(nextProps, prveState) {
+        alert(1);
         // 函数返回结果会被添加到state里面去
         // null state不改变值
-        return null
+        return null;
     }
 
     render() {
-        console.log('render')
+        console.log('childrenrender')
         return <div style={{ border: "solid black 1px" }}>
-            定时器: {this.state.time.getSeconds()}
+            定时器: {this.state.time}
             <br />
             <button onClick={() => this.updateState()}>更新</button>
             <br />
@@ -46,16 +46,18 @@ export default class LifeCycleChild extends React.Component {
     // }
 
     componentDidMount() {
-        console.log('组件加载完毕')
+        console.log('children组件加载完毕')
     }
 
     // 更新阶段
-    // componentWillReceiveProps() {
-    //     console.log('组件将要接收参数----componentWillReceiveProps')
+    // componentWillReceiveProps(props) {
+    //     console.log(props)
+    //     this.setState({ time: props.time })
+    //     console.log('children组件将要接收参数----componentWillReceiveProps')
     // }
 
     shouldComponentUpdate() {
-        console.log('组件是否应该更新 --- shouldComponentUpdate')
+        console.log('children组件是否应该更新 --- shouldComponentUpdate')
         return true
     }
 
